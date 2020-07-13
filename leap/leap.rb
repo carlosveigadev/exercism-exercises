@@ -1,8 +1,5 @@
-=begin
-Write your code for the 'Leap' exercise in this file. Make the tests in
-`leap_test.rb` pass.
-
-To get started with TDD, see the `README.md` file in your
-`ruby/leap` directory.
-=end
-
+module Year
+  def self.leap?(year)
+    return (year%400).zero? ? true : (year%100).zero? ? false : (year%4).zero? ? true : false
+  end
+end
