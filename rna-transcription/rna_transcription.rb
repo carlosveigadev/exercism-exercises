@@ -19,3 +19,11 @@ module Complement
     rna
   end
 end
+
+=begin
+module Complement
+  def self.of_dna(dna)
+    dna.tr("CGTA", "GCAU")
+  end
+end
+=end

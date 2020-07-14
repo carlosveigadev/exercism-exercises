@@ -1,26 +1,25 @@
 class HighScores
-  def initialize(data)
-    @data = data
+  def initialize(score)
+    @score = score
   end
 
   def scores
-    @data
+    @score
   end
 
   def latest
-    @data[-1]
+    @score[-1]
   end
 
   def personal_best
-    @data.max
+    @score.max
   end
 
   def personal_top_three
-    @data.max(3)
+    @score.max(3)
   end
 
   def latest_is_personal_best?
-    @data[-1] === @data.max ? true : false
+    latest =~ personal_best
   end
-
 end
