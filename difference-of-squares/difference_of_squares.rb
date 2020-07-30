@@ -17,3 +17,14 @@ class Squares
     square_of_sum - sum_of_squares
   end
 end
+
+
+# class Squares
+#   attr_accessor :difference, :square_of_sum, :sum_of_squares
+
+#   def initialize(value)
+#     @sum_of_squares = (1..value).sum { |it| it ** 2 }
+#     @square_of_sum = (1..value).sum ** 2
+#     @difference = (@sum_of_squares - @square_of_sum).abs
+#   end
+# end
