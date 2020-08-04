@@ -1,8 +1,17 @@
-=begin
-Write your code for the 'Sum Of Multiples' exercise in this file. Make the tests in
-`sum_of_multiples_test.rb` pass.
+class SumOfMultiples
+  attr_accessor :multiples_of
 
-To get started with TDD, see the `README.md` file in your
-`ruby/sum-of-multiples` directory.
-=end
+  def initialize(*multiples_of)
+    @multiples_of = multiples_of
+  end
 
+  def to(number)
+    sum_array = []
+    @multiples_of.to_a.each do |n|
+      (1...number).each do |i|
+        sum_array << i if (i % n).zero?
+      end
+    end
+    sum_array.uniq.sum
+  end
+end
